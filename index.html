@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Imoveis Guide</title>
+  </head>
+  <body>
+    <main>
+      <nav class="navbar" id="navbar">
+        <div class="navlist" id="navlist">
+          <img src="/images/logo-imovel-guide.png" alt="" class="logo" />
+          <ul>
+            <li><a href="#">Condomínios</a></li>
+            <li><a href="#">Fórum</a></li>
+            <li><a href="#">Guia</a></li>
+            <li><a href="#">Artigos</a></li>
+            <li class="tools"><a href="#">Ferramentas</a></li>
+
+            <li><a href="#">Cotar Imóvel</a></li>
+            <li><a href="#">Planos</a></li>
+            <li><a href="#">Entrar</a></li>
+            <li><a href="#" class="register" id="register">CADASTRE-SE</a></li>
+          </ul>
+        </div>
+        <span class="menu-hamburger" title="menu-hamburger"></span>
+      </nav>
+
+      <div class="content" id="content">
+        <!-- Campo 1 - Corretores -->
+        <div class="profiles container" id="profiles">
+          
+        </div>
+        <!-- Campo 2 - Mande uma mensagem -->
+        <div class="contact container" id="contact">
+          <h3>Mande uma mensagem:</h3>
+          <input
+            type="text"
+            placeholder="Digite seu CPF"
+            class="cpf"
+            id="cpf"
+            maxlength="14"
+            oninput="CPFmask(this)"
+          />
+          <input
+            type="text"
+            placeholder="Digite seu telefone"
+            class="number-tel"
+            id="number-tel"
+            maxlength="15"
+            oninput="phoneMask(this)"
+          />
+          <textarea
+            type="text"
+            placeholder="Digite o assunto"
+            class="message"
+            id="message"
+          ></textarea>
+          <button class="message-btn" id="message-btn" onclick="sendMessage()">
+            Enviar Mensagem
+          </button>
+        </div>
+        <!-- Campo 3 - Regra de 3 -->
+        <div class="container rule-of-three" id="rule-of-three">
+          <input
+            type="number"
+            id="first-value"
+            class="first-value value-input"
+            placeholder="Primeiro valor"
+          />
+          --------------
+          <input
+            type="number"
+            id="second-value"
+            class="second-value value-input"
+            placeholder="Segundo valor"
+          />
+          <input
+            type="number"
+            id="third-value"
+            class="third-value value-input"
+            placeholder="Terceiro valor"
+          />
+          --------------
+          <input
+            type="number"
+            id="result"
+            class="result"
+            placeholder="Resultado"
+            disabled
+          />
+          <button class="calc-btn" id="calc-btn" onclick="ruleOfThree()">
+            Calcular
+          </button>
+        </div>
+        <!-- Campo 4 - Modal -->
+        <div class="image-modal container" id="image-modal">
+          <img src="/images/house.png" alt="Casa" class="house" />
+          <button class="open-modal" id="open-modal">
+            ABRIR IMAGEM NO MODAL
+          </button>
+          <!-- Modal -->
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <img src="" alt="Imagem Modal" id="modal-image" />
+            </div>
+          </div>
+        </div>
+        <!-- Campo 5 - Download -->
+        <div class="image-download container" id="image-download">
+          <img src="/images/house2.png" alt="" class="house" id="house" />
+          <button class="download-btn" id="download-btn">Download</button>
+        </div>
+        <!-- Campo 6 - Zoom -->
+        <div class="image-zoom container" id="image-zoom">
+          <img src="/images/house.png" alt="" class="house" id="house" />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
